@@ -4,17 +4,51 @@ import { createCliRenderer } from "@opentui/core";
 import { createRoot } from "@opentui/react";
 import { getWelcomeMessage } from "@contentcode/shared";
 
+function BackgroundAsciiArt() {
+  return (
+    <box
+      position="absolute"
+      top={1}
+      left={2}
+      zIndex={0}
+      opacity={0.35}
+    >
+      <ascii-font
+        text="OPENCODE"
+        font="block"
+        color="#1E293B"
+        selectable={false}
+      />
+    </box>
+  );
+}
+
+function WelcomeText() {
+  return (
+    <box
+      position="absolute"
+      top={8}
+      left={6}
+      zIndex={1}
+      flexDirection="column"
+      gap={1}
+    >
+      <text fg="#F8FAFC">{getWelcomeMessage("cli")}</text>
+      <text fg="#94A3B8">Bun workspaces are ready.</text>
+      <text fg="#64748B">Press Ctrl+C to exit.</text>
+    </box>
+  );
+}
+
 function App() {
   return (
     <box
-      borderStyle="rounded"
-      flexDirection="column"
-      gap={1}
-      padding={1}
+      width="100%"
+      height="100%"
+      backgroundColor="#020617"
     >
-      <text fg="#7DD3FC">{getWelcomeMessage("cli")}</text>
-      <text fg="#F8FAFC">Bun workspaces are ready.</text>
-      <text fg="#94A3B8">Press Ctrl+C to exit.</text>
+      <BackgroundAsciiArt />
+      <WelcomeText />
     </box>
   );
 }
