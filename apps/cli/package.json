@@ -3,14 +3,17 @@
   "private": true,
   "type": "module",
   "bin": {
-    "contentcode": "./src/index.ts"
+    "contentcode": "./src/index.tsx"
   },
   "scripts": {
-    "dev": "bun src/index.ts",
-    "start": "bun src/index.ts",
+    "dev": "bun src/index.tsx",
+    "start": "bun src/index.tsx",
     "check": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@opentui/core": "latest"
+    "@contentcode/shared": "workspace:*",
+    "@opentui/core": "latest",
+    "@opentui/react": "latest",
+    "react": "latest"
   }
 }

@@ -1,10 +1,12 @@
+import { projectName } from "@contentcode/shared";
 import { Hono } from "hono";
 
 export const app = new Hono();
 
 app.get("/", (c) => {
   return c.json({
-    name: "contentcode-server",
+    name: projectName,
+    app: "server",
     status: "ok",
   });
 });
