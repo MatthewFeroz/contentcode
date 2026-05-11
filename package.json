@@ -1,0 +1,20 @@
+{
+  "name": "contentcode",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:server": "bun --filter @contentcode/server dev",
+    "start:server": "bun --filter @contentcode/server start",
+    "dev:cli": "cd apps/cli && bun --silent run dev",
+    "start:cli": "cd apps/cli && bun --silent run start",
+    "check": "bun --filter '*' check"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "latest"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "@contentcode/cli",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "contentcode": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "bun src/index.ts",
+    "start": "bun src/index.ts",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@opentui/core": "latest"
+  }
+}
