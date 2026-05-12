@@ -19,8 +19,12 @@
         "@contentcode/shared": "workspace:*",
         "@opentui/core": "latest",
         "@opentui/react": "latest",
+        "hono": "latest",
         "react": "latest",
         "react-router": "latest",
+      },
+      "devDependencies": {
+        "@contentcode/server": "workspace:*",
       },
     },
     "apps/server": {

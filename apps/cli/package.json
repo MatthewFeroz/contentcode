@@ -12,9 +12,13 @@
   },
   "dependencies": {
     "@contentcode/shared": "workspace:*",
+    "hono": "latest",
     "@opentui/core": "latest",
     "@opentui/react": "latest",
     "react": "latest",
     "react-router": "latest"
+  },
+  "devDependencies": {
+    "@contentcode/server": "workspace:*"
   }
 }

@@ -1,11 +1,6 @@
-import { serve } from "bun";
 import { app } from "./app";
 
-const port = Number(Bun.env.PORT ?? 3000);
-
-serve({
+export default {
+  port: Number(Bun.env.PORT ?? 3000),
   fetch: app.fetch,
-  port,
-});
-
-console.log(`Hono server listening on http://localhost:${port}`);
+};
