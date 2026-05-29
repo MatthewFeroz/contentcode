@@ -28,6 +28,11 @@ export function HomePrompt() {
       return;
     }
 
+    if (command === "health" || command === "/health") {
+      navigate("/health");
+      return;
+    }
+
     navigate(`/not-found?command=${encodeURIComponent(command)}`);
   }
 
