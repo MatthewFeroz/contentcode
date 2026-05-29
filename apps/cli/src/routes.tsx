@@ -1,5 +1,6 @@
 import { createMemoryRouter } from "react-router";
 import { AboutScreen } from "./screens/about-screen";
+import { AgentScreen } from "./screens/agent-screen";
 import { HealthScreen } from "./screens/health-screen";
 import { HomeScreen } from "./screens/home-screen";
 import { NotFoundScreen } from "./screens/not-found-screen";
@@ -21,6 +22,10 @@ export const router = createMemoryRouter([
   {
     path: "/health",
     element: <HealthScreen />,
+  },
+  {
+    path: "/agent",
+    element: <AgentScreen />,
   },
   {
     path: "*",

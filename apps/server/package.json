@@ -13,6 +13,10 @@
   },
   "dependencies": {
     "@contentcode/shared": "workspace:*",
-    "hono": "latest"
+    "@langchain/anthropic": "latest",
+    "@langchain/core": "latest",
+    "hono": "4.12.23",
+    "langchain": "latest",
+    "zod": "latest"
   }
 }

@@ -33,6 +33,11 @@ export function HomePrompt() {
       return;
     }
 
+    if (command === "agent" || command === "/agent") {
+      navigate("/agent");
+      return;
+    }
+
     navigate(`/not-found?command=${encodeURIComponent(command)}`);
   }
 
